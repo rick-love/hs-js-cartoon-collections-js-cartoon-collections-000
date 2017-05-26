@@ -4,7 +4,7 @@ let a  = [];
   for(var i = 0; i < dwarves.length; i++){
  a.push(`${[i+1]}. ${dwarves[i]}`);
 }
-return a.join(' ');
+return a.join(' ').concat(' ');
 }
 
 function summonCaptainPlanet(planeteerCalls){
@@ -17,14 +17,17 @@ function summonCaptainPlanet(planeteerCalls){
 }
 
 function longPlaneteerCalls(words) {
+
+  let a = false;
+
+
   for(let i = 0; i < words.length; i ++){
-    if((words[i].length) >= 4){
-      return true;
+    if((words[i].length) > 4){
+     a = true;
     }
-    if((words[i].length) <= 4){
-      return false;
-    }
+
   }
+  return a;
 }
 
 function findTheCheese (foods) {
